@@ -91,11 +91,7 @@
           <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start Process" FileName="[in_Config(&quot;FM App exe path&quot;).ToString.Replace(&quot;{USERNAME}&quot;,Environment.UserName)]" sap:VirtualizedContainerService.HintSize="1126,87" sap2010:WorkflowViewState.IdRef="StartProcess_1" />
           <ui:UiElementExists DisplayName="Password field exists" Exists="[ElementExists]" sap:VirtualizedContainerService.HintSize="1126,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
             <ui:UiElementExists.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2984bc12-9ccc-4edc-a406-86b1804b8915" InformativeScreenshot="c90ac3a8da9003bbbf197432bf77dfd9" Selector="&lt;wnd app='*filemaker*' cls='HwndWrapper*' title='Attention' /&gt;&lt;ctrl automationid='IDC_SHOW_CUSTOM_MESSAGE_EDIT1' aastate='focusable' role='editable text' /&gt;" WaitForReady="COMPLETE">
-                <ui:Target.TimeoutMS>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:Target.TimeoutMS>
-              </ui:Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2984bc12-9ccc-4edc-a406-86b1804b8915" InformativeScreenshot="c90ac3a8da9003bbbf197432bf77dfd9" Selector="&lt;wnd app='*filemaker*' cls='HwndWrapper*' title='Attention' /&gt;&lt;ctrl automationid='IDC_SHOW_CUSTOM_MESSAGE_EDIT1' aastate='focusable' role='editable text' /&gt;" TimeoutMS="120000" WaitForReady="COMPLETE" />
             </ui:UiElementExists.Target>
           </ui:UiElementExists>
           <If Condition="[ElementExists]" sap:VirtualizedContainerService.HintSize="1126,1217" sap2010:WorkflowViewState.IdRef="If_1">
@@ -120,7 +116,7 @@
                     </ui:Target>
                   </ui:TypeSecureText.Target>
                 </ui:TypeSecureText>
-                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click OK" sap:VirtualizedContainerService.HintSize="797,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click OK" sap:VirtualizedContainerService.HintSize="797,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
                   <ui:Click.CursorPosition>
                     <ui:CursorPosition Position="Center">
                       <ui:CursorPosition.OffsetX>
